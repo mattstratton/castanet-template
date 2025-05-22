@@ -1,0 +1,69 @@
+mainSections = ["episode"] # Required. Sets the page type for what shows up on the homepage.
+# episode_number_style  = "brackets" # Optional. The format used for episode numbers in the episode's RSS feed. If not set, the episode title in the RSS feed will just default to the title of the episode, without any episode number included. Options are "parens", "dash" or "brackets"
+# episode_number_prefix = "CWC" # Optional. A prefix used in the episode's RSS feed before the episode number. For example, if episode_number_prefix was set to CWC for episode 1, then the output might be Title of the Episode - CWC1.
+colorScheme = "slate"
+site_layout = "row" # Options are "row" or "grid"
+show_next_upcoming = "false" # Optional. Options are "true" or "false"
+enable_jumbo = "true" # Optional. When using the row layout, will set a jumbotron at the top instead of the sidebar. Options are "true" or "false". Default is "true"
+disable_title_caps = "false" # Optional. When generating the RSS XML file do not convert the episode title to Title Case (using Title Case is the default). Default is "true".
+copyright_notice = "Copyright [YOUR NAME](https://www.gohugo.io)" # Required. Your copyright information for the footer of the page. Can contain Markdown.
+youtube_subscribe = "https://www.youtube.com/XXXX" # Optional. The URL to subscribe your podcast's channel on YouTube
+apple_podcasts_subscribe = "https://podcasts.apple.com/XXX" # Optional. The URL of your podcast in the Apple Podcasts store.
+android_subscribe = "http://subscribeonandroid.com/XXXX" # Optional. The URL for your podcast for Android users. You can generate this URL at https://subscribeonandroid.com/
+spotify_subscribe = "https://open.spotify.com/show/XXX" # Optional. The URL to your podcast's page on Spotify
+soundcloud_subscribe = "http://feeds.soundcloud.com/xxx.rss" # Optional. The URL to your podcast's feed on Soundcloud
+pocketcasts_subscribe = "http://pcasts.in/feed/XXX.rss" # Optional. The URL to your podcast's feed on Pocketcasts.
+mailchimp_subscribe = "//arresteddevops.us3.list-manage.com/subscribe/post?XXX" # Optional. The URL for your MailChimp signup form. This can be acquired from creating a "Super Slim" Embedded form on MailChimp. Do NOT include the entire form HTML; you just need the path for the form action.
+# rss_subscribe = "http://feed.com/myfeed" # Optional. Over-ride the RSS feed URL, in case you use something like Feedburner. You likely do NOT need to set this parameter unless you have a very good reason to do so.
+description = "The HugoCast is the best podcast you've ever seen. You will learn everything you ever needed to know about [podcasting](https://en.wikipedia.org/wiki/Podcast) from the most inspiring experts to ever show up on the whole internet." # Required. Description of your show. Can use Markdown.
+media_prefix = "https://media.blubrry.com/XXXX/" # Required. The URL to pre-pend to your podcast files. Must end in a slash.
+
+[feed] # Parameters related to feed generation
+  copyright = "Copyright 2020 Matt Stratton" # Required. The copyright information for your feed. Do not use Markdown.
+    apple_podcasts_subtitle = "The best podcast ever" # Optional. No markdown or HTML.
+    apple_podcasts_author = "Matt Stratton" # Required. The author name for your show. No Markdown or HTML.
+    apple_podcasts_summary = "The HugoCast is the best podcast you've ever seen. You will learn everything you ever needed to know about podcasting from the most inspiring experts to ever show up on the whole internet." # Required. Limited to 4000 characters or less, plain text, no HTML.
+    apple_podcasts_owner_name = "Matt Stratton" # Required. The name associated with the owner of the podcast on Apple Podcasts. Will not be displayed publicly on Apple Podcasts.
+    apple_podcasts_owner_email = "matt.stratton@gmail.com" # Required. The e-mail address that will be used to contact the owner of the podcast for communication specifically about their podcast on Apple Podcasts. It will not be publicly displayed on Apple Podcasts.
+    apple_podcasts_image = "https://www.arresteddevops.com/img/ado-podcast-logo.png" # Required. Fully qualified URL to your podcast's artwork for Apple Podcasts. Must conform to the Apple Podcasts image requirements, and be a JPG or PNG with a minimum of 1400 x 1400 pixels and a maximum of 3000 x 3000 pixels.
+    apple_podcasts_top_category = "Technology" # Required. The main category for your podcast in Apple Podcasts.
+    apple_podcasts_first_sub_category = "Software How-To" # Optional. The first sub-category for your podcast in Apple Podcasts
+    apple_podcasts_second_sub_category = "Tech News" # Optional. The second sub-category for your podcast in Apple Podcasts. Do not set this if you didn't set the first one.
+    language = "en-us" # The language for your podcast.
+    explicit = "no" # Optional. Whether or not the podcast itself contains explicit content (can also be set on a per-episode basis). Default value from the archetype is "no". Options are "yes", "no", or "clean"
+
+[realfavicongenerator] # favicon parameters for your overall site. Refer to https://realfavicongenerator.net/
+  mask_icon_color="#5bbad5"
+  msapplication_tilecolor="#2b5797"
+  theme_color="#ffffff"
+
+[social] 
+# These are the social network parameters for your overall site. All of them allow either the short form (e.g. just your twitter handle) where the theme will construct the URL or the full URL beginning with https:// (with the exception of Mastodon, as that does not have a common url scheme).
+  github = "arresteddevops" # Optional. The GitHub user for your podcast.
+  # gitlab = "mattstratton" # Optional. The GitLab user for your podcast.
+  # facebook = "Arresteddevops" # Optional. Name of the Facebook page (not the URL).
+  # facebook_admin = ["500557137","1234"] # Optional. This needs to be one or more page admins to get domain insights
+  twitter = "https://twitter.com/arresteddevops" # Optional. Twitter user either as the URL or the username without the @ sign.
+  twitter_domain = "arresteddevops.com" # Required. This domain shows in twitter cards as "View on `twitter_domain`"
+  # pinterest = "nozzleio" # Optional. Pinterest username
+  instagram = "nozzleio" # Optional. Instagram username
+  youtube = "arresteddevops" # Optional. Name of the YouTube channel
+  # Short form in linkedin will link to a user's page so use long form for company pages
+  linkedin = "https://www.linkedin.com/company/linkedin/" # Optional. Short form in linkedin will link to a user's page so use long form for company pages
+  twitch = "mattstratton" # Optional. Twitch username.
+  mastodon = "https://hachyderm.io/@mattstratton" # Optional. Fully qualified URL to the Mastodon profile page.
+  threads = "mattstratton" # Optional. Thread username
+  bluesky = "flavorflav.bsky.social" # Optional. Bluesky username
+
+[authors]
+# We use the "authors" from the configuration to list hosts in the jumbotron or sidebar. All hosts should have an entry in here. 
+  [authors.Applejack]
+    name	= "Applejack" # Name of the host/author
+    thumbnail = "examples/img/host/example-1.png" # The image for the user. This can either be a fully qualifed URL, or relative to the baseURL. 
+    pronouns = "she/her" # The preferred pronouns of the author/host.
+    bio = ""
+
+  [authors.TwilightSparkle]
+    name = "Twilight Sparkle"
+    thumbnail = "examples/img/host/example-2.png"
+    bio = ""
