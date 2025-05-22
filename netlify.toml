@@ -1,0 +1,27 @@
+# Production context: All deploys to the main
+# repository branch will inherit these settings.
+[context.production]
+# publish = "exampleSite/public"
+   command = "hugo mod get -u && hugo --gc --minify --buildDrafts --buildFuture --baseURL=$URL"
+   publish = "public/"
+
+# Deploy Preview context: All Deploy Previews
+# will inherit these settings.
+[context.deploy-preview]
+  publish = "public/"
+  command = "hugo mod get -u && hugo --gc --minify --buildDrafts --buildFuture --baseURL=$DEPLOY_PRIME_URL"
+
+# Branch deploy context: All Branch Deploys
+# will inherit these settings.
+[context.branch-deploy]
+  publish = "public/"
+  command = "hugo mod get -u && hugo --gc --minify --buildDrafts --buildFuture --baseURL=$DEPLOY_PRIME_URL"
+
+  [context.production.environment]
+     HUGO_VERSION = "0.147.3"
+
+  [context.deploy-preview.environment]
+    HUGO_VERSION = "0.147.3"
+
+  [context.branch-deploy.environment]
+    HUGO_VERSION = "0.147.3"
