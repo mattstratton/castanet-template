@@ -1,6 +1,6 @@
 # Podcast Site Template (Castanet)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/netlify-statuskit)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mattstratton/castanet-template)
 
 This repository is a template for creating a new podcast website using the [Castanet](https://github.com/mattstratton/castanet) theme for [Hugo](https://gohugo.io/). It provides a ready-to-use structure for hosting, managing, and publishing your podcast episodes with ease.
 
